@@ -52,7 +52,7 @@ describe("/categories", () => {
   test("GET /categories/:id/services - Must be able to list one category service", async () => {
     const category = await request(app).get("/categories");
     const response = await request(app).get(
-      `/categories/${category.body[0].id}/service`
+      `/categories/${category.body[0].id}/services`
     );
 
     expect(response.status).toBe(200);
